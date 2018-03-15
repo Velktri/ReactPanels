@@ -60,42 +60,6 @@ class Layout extends Component
             ]
         }
 
-        var LayoutJSON = {
-            "Component": "Container",
-            "orientation": "horizontal",
-            "children": [
-                {
-                    "Component": "Debugger"
-                },
-                {
-                    "Component": "Container",
-                    "orientation": "vertical",
-                    "children": [
-                        {
-                            "Component": "Debugger"
-                        },
-                        {
-                            "Component": "Container",
-                            "orientation": "horizontal",
-                            "children": [
-                                {
-                                    "Component": "Debugger"
-                                },
-                                {
-                                    "Component": "Debugger"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-
-        //var jsonObject = JSON.parse(LayoutJSON);
-        console.log(LayoutJSON);
-        console.log(' ');
-        console.log(NewLayout);
-
         this.setState({ layoutTree: NewLayout });
     }
 
@@ -120,6 +84,8 @@ class Layout extends Component
     }
 }
 
+
+/**  Prop Types  */
 Layout.propTypes = {
     panelSize: propTypes.arrayOf(propTypes.number).isRequired,
     dividerSize: propTypes.number,
@@ -128,5 +94,7 @@ Layout.propTypes = {
 Layout.defaultProps = {
     dividerSize: 2,
 }
+
+
 
 export default Layout;
